@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <style>
+        .font{
+            /* font-family: Century Gothic,CenturyGothic,AppleGothic, monospace, sans-serif;  */
+            font-family: "Roboto";
+        }
+        .fontEngNormal{
+            font-weight: 300;
+            font-size: 2vw;
+            letter-spacing: 0.3vw;
+        }
+        .fontEng{
+            font-size: 2vw;
+            letter-spacing: 0.3vw;
+        }
+        .fontWihte{
+            color: white;
+        }
+    </style>
+</head>
+<body onload="start()">
+<!-- <body> -->
+
+    <!-- 語言選項(丟post php回傳網頁) -->
+    <form action="index.php" method="post">
+        <div class="languageBox" id="languageBox">
+            <button type="submit" class="hiddenBtn"  id="lanTaiwan" name="lanBtn" value="TW"><img src="taiwan.png" alt="taiwan" class="lanBtn"></button>
+            <button type="submit" class="hiddenBtn" id="lanUS" name="lanBtn" value="US"><img src="US.png" alt="US" class="lanBtn" ></button>
+        </div>
+        <div id="defultLan" style="display: none;">US</div>
+    </form>
+<!-- <div class="back1"></div> -->
+<!-- <div class="backG"></div> -->
+
+
+<!-- diologIntro -->
+<div class="diologContainer">
+    <!-- <div style="margin-left: 10%;"> -->
+    <div id="intro">
+        <div class="font fontBold fontExtraLarge cannotselect" id="hi">Hi!</div>
+        <div class="font fontEngNormal cannotselect" id="Wei">I am Wei.</div>
+        <div class="font fontEngNormal cannotselect" id="ps">As a Designer, </div>   
+        <div class="flexText" id="ani">
+            <div class="font fontEngNormal cannotselect firstSentence">Cracking 
+                <!-- <span class="fontBold problem touchingEffect" id="problemWhole"><span class="spanP"><span>P</span></span><span class="spanP"><span>R</span></span><span class="spanP"><span>O</span></span><span class="spanP"><span>B</span></span><span class="spanP"><span>L</span></span><span class="spanP"><span>E</span></span><span class="spanP"><span>M</span></span><span class="spanP"><span>S</span></span></span>  -->
+            </div> 
+            <div class="font fontEngNormal cannotselect"> is my life... </div>
+        </div>        
+    <!-- <div class="rightP">
+        <div class="circle circleGraffi"></div>
+    </div> -->
+
+    </div>
+</div>
+<div class="touchingEffect problemWhole" id="problemWhole"><span class="spanP font fontEng fontBold cannotselect problem touchingEffect"><span>P</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>R</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>O</span></span><span class="spanP font fontEng cannotselect fontBold problem touchingEffect"><span>B</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>L</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>E</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>M</span></span><span class="spanP font fontEng cannotselect  problem touchingEffect"><span>S</span></span></div>
+<div class="fontHw clickHere" id="click">
+    <img src="arrow.png" style="width: 40px;height: 40px;"> 
+    <div>Click Here !</div>
+</div>
+
+
+
+<!-- header -----------------------------------------------------     ------          ------------------------       -->
+<div class="header" id="header">
+    <!-- <div style="margin-left: 10%;"> -->
+    <div class="hi font fontBold fontSizeLarge cannotselect">Hi!</div>
+    <div class="intro">
+        <div class="font fontThin cannotselect">I am Wei.</div>
+        <div class="font fontThin cannotselect">As a Designer, </div>   
+        <div class="font fontThin cannotselect">Cracking Problems is my life... </div>
+    <!-- <div class="rightP">
+        <div class="circle circleGraffi"></div>
+    </div> -->
+
+    </div>
+</div>
+
+
+<!-- 左側按鈕  -------------------------------------------------------------------------------                  -->
+<div class="MenuBTNContainer" id="MenuBTNContainer">
+    <div>
+        <!-- Part 1 resume -->
+        <!-- <div class="resume resumeColor" id="resume"> -->
+    <div class="font fontThin fontTitle titleBtn cannotselect" id="ResumeBtn">
+        <span class="fontLarge">R</span><span id="esume" style="color: white;">esume</span>
+    </div>
+    <!-- </div> -->
+    <!-- Part 2 Ability Bar -->
+    <!-- <div class="font fontThin fontTitle marginTop titleBtn cannotselect" id="abilityBtn">Ability</div> -->
+    <div class="font fontThin fontTitle marginTop titleBtn cannotselect" id="AbilityBtn">
+        <span class="fontLarge">A</span><span id="bility" style="color: white;">bility</span>
+    </div>
+    <!-- Part 3 time series -->
+    <!-- <div class="font fontThin fontTitle marginTop titleBtn cannotselect" id="timeSeiesBtn">Time series</div> -->
+    <div class="font fontThin fontTitle marginTop titleBtn cannotselect" id="ExpBtn">
+        <span class="fontLarge">E</span><span id="xperience" style="color: white;">xperience</span>
+    </div>
+    <!-- Part 4 Gallery -->
+    <!-- <div class="font fontThin fontTitle marginTop titleBtn cannotselect" id="galleryBtn">Gallery</div> -->
+    <div class="font fontThin fontTitle marginTop titleBtn cannotselect" id="PortBtn">
+        <span class="fontLarge">P</span><span id="ortfolio" style="color: white;">ortfolio</span>
+    </div>
+
+
+    
+</div>  
+
+</div>
+
+
+<!-- ----------------------------  Main Part   ---------------------------------------- -->
+<div class="font fontBold fontSizeLarge" style="position: absolute; top: 45%; left: 35%; display: none;" id="still">
+    still constructing...
+</div>
+<div> 
+    <!-- Part 1 resume -->
+    <div id="resumeContainer" class="resumeContainer fontWihte">
+        <div class="resumeTitle">
+            <img src="profile.png" class="profile">
+            <div class="font fontThin fontMainTitle cannotselect">Wei Lee</div>
+        </div>
+
+        <div class="resumeBasic">
+            <div class="resIconBox">
+                <a href="https://www.facebook.com/profile.php?id=100002193295814" target="_blank"><img class="resIcon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDExMi4xOTYgMTEyLjE5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTEyLjE5NiAxMTIuMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiMzQjU5OTg7IiBjeD0iNTYuMDk4IiBjeT0iNTYuMDk4IiByPSI1Ni4wOTgiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTcwLjIwMSw1OC4yOTRoLTEwLjAxdjM2LjY3Mkg0NS4wMjVWNTguMjk0aC03LjIxM1Y0NS40MDZoNy4yMTN2LTguMzQNCgkJYzAtNS45NjQsMi44MzMtMTUuMzAzLDE1LjMwMS0xNS4zMDNMNzEuNTYsMjEuODF2MTIuNTFoLTguMTUxYy0xLjMzNywwLTMuMjE3LDAuNjY4LTMuMjE3LDMuNTEzdjcuNTg1aDExLjMzNEw3MC4yMDEsNTguMjk0eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" /></a>
+                <a href="https://www.linkedin.com/in/%E5%A8%81%E8%AB%96-%E6%9D%8E-b9b98799/" target="_blank"><img  class="resIcon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDExMi4xOTYgMTEyLjE5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTEyLjE5NiAxMTIuMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiMwMDdBQjk7IiBjeD0iNTYuMDk4IiBjeT0iNTYuMDk3IiByPSI1Ni4wOTgiLz4NCgk8Zz4NCgkJPHBhdGggc3R5bGU9ImZpbGw6I0YxRjJGMjsiIGQ9Ik04OS42MTYsNjAuNjExdjIzLjEyOEg3Ni4yMDdWNjIuMTYxYzAtNS40MTgtMS45MzYtOS4xMTgtNi43OTEtOS4xMTgNCgkJCWMtMy43MDUsMC01LjkwNiwyLjQ5MS02Ljg3OCw0LjkwM2MtMC4zNTMsMC44NjItMC40NDQsMi4wNTktMC40NDQsMy4yNjh2MjIuNTI0SDQ4LjY4NGMwLDAsMC4xOC0zNi41NDYsMC00MC4zMjloMTMuNDExdjUuNzE1DQoJCQljLTAuMDI3LDAuMDQ1LTAuMDY1LDAuMDg5LTAuMDg5LDAuMTMyaDAuMDg5di0wLjEzMmMxLjc4Mi0yLjc0Miw0Ljk2LTYuNjYyLDEyLjA4NS02LjY2Mg0KCQkJQzgzLjAwMiw0Mi40NjIsODkuNjE2LDQ4LjIyNiw4OS42MTYsNjAuNjExTDg5LjYxNiw2MC42MTF6IE0zNC42NTYsMjMuOTY5Yy00LjU4NywwLTcuNTg4LDMuMDExLTcuNTg4LDYuOTY3DQoJCQljMCwzLjg3MiwyLjkxNCw2Ljk3LDcuNDEyLDYuOTdoMC4wODdjNC42NzcsMCw3LjU4NS0zLjA5OCw3LjU4NS02Ljk3QzQyLjA2MywyNi45OCwzOS4yNDQsMjMuOTY5LDM0LjY1NiwyMy45NjlMMzQuNjU2LDIzLjk2OXoNCgkJCSBNMjcuODY1LDgzLjczOUg0MS4yN1Y0My40MDlIMjcuODY1VjgzLjczOXoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" /></a>
+                <a href="mailto:zorro.weilee@gmail.com"><img  class="resIcon" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDEyOCAxMjgiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgaWQ9Im51bWJlciI+PHRleHQgZmlsbD0iIzI0MjUzYSIgZm9udC1mYW1pbHk9Ik15cmlhZFByby1SZWd1bGFyLCBNeXJpYWQgUHJvIiBmb250LXNpemU9IjQwIiBsZXR0ZXItc3BhY2luZz0iLjAwMmVtIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NC4zNjYgLTExOTQuMjY1KSI+NDx0c3BhbiB4PSItMTAuMyIgeT0iMjI4Ij4xNDwvdHNwYW4+PHRzcGFuIHg9Ii0xMC4zIiB5PSI0NTYiPjI0PC90c3Bhbj48dHNwYW4geD0iLTEwLjMiIHk9IjY4NCI+MzQ8L3RzcGFuPjx0c3BhbiB4PSItMTAuMyIgeT0iOTEyIj40NDwvdHNwYW4+PHRzcGFuIHg9Ii0xMC4zIiB5PSIxMTQwIj41NDwvdHNwYW4+PHRzcGFuIHg9Ii0xMC4zIiB5PSIxMzY4Ij42NDwvdHNwYW4+PHRzcGFuIHg9Ii0xMC4zIiB5PSIxNTk2Ij43NDwvdHNwYW4+PHRzcGFuIHg9Ii0xMC4zIiB5PSIxODI0Ij44NDwvdHNwYW4+PHRzcGFuIHg9Ii0xMC4zIiB5PSIyMDUyIj45NDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjIyODAiPjEwNDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjI1MDgiPjExNDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjI3MzYiPjEyNDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjI5NjQiPjEzNDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjMxOTIiPjE0NDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjM0MjAiPjE1NDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjM2NDgiPjE2NDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjM4NzYiPjE3NDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjQxMDQiPjE4NDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjQzMzIiPjE5NDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjQ1NjAiPjIwNDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjQ3ODgiPjIxNDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjUwMTYiPjIyNDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjUyNDQiPjIzNDwvdHNwYW4+PHRzcGFuIHg9Ii0yMC41OTkiIHk9IjU0NzIiPjI0NDwvdHNwYW4+PC90ZXh0PjwvZz48ZyBpZD0iQ2lyY2xlX0dyaWQiIGRhdGEtbmFtZT0iQ2lyY2xlIEdyaWQiPjxjaXJjbGUgY3g9IjY0IiBjeT0iNjQiIGZpbGw9IiMyY2JmYWUiIHI9IjY0Ii8+PC9nPjxnIGlkPSJpY29uIj48cGF0aCBkPSJtMTAzLjY2MiA1My43NzF2NDQuODk1YTMuOSAzLjkgMCAwIDEgLTEuMyAyLjkzNmwtLjExOC4xMThhMy45NTkgMy45NTkgMCAwIDEgLTIuNTgyLjk0NmgtNzEuMzIzYTMuOTQ1IDMuOTQ1IDAgMCAxIC0yLjU2Mi0uOTQ2LjMzNC4zMzQgMCAwIDEgLS4xMTgtLjExOCAzLjkxNiAzLjkxNiAwIDAgMSAtMS4zMjEtMi45MzZ2LTQ0Ljg5NWEzLjgxNyAzLjgxNyAwIDAgMSAxLjA2NC0yLjY4IDMuNyAzLjcgMCAwIDEgMS0uODI4IDQuMDE5IDQuMDE5IDAgMCAxIDEuOTMxLS40OTNoNzEuMzI4YTQuMTgzIDQuMTgzIDAgMCAxIDIuOTU2IDEuMyA0LjAzMiA0LjAzMiAwIDAgMSAxLjA0NSAyLjcwMXoiIGZpbGw9IiNmNmI4NjMiLz48cGF0aCBkPSJtMTAyLjYyMSA1MS4wNjZjLS4yODEuMzQ3LTM4LjYgMzAuODIxLTM4LjYgMzAuODIxbC0zOC42MjEtMzAuNzg3LjAxNy0uMDE2di0uMDE3bDM2LjQxNy0yOS42MjVhMy40NTggMy40NTggMCAwIDEgNC4zNjQgMHoiIGZpbGw9IiNlYWExNGUiLz48cGF0aCBkPSJtOTQuNDc0IDMwLjQwOXYyNy4yMThsLTMwLjQ1NyAyNC4yNi0zMC40NzQtMjQuMjkzdi0yNy4xODV6IiBmaWxsPSIjZWVlZmVlIi8+PHBhdGggZD0ibTEwMi4zNTcgMTAxLjZhLjc1OC43NTggMCAwIDEgLS4xMTYuMTE2bC0zNC4zMDgtMjIuODg2IDMuMTQtMi41Mjl6IiBmaWxsPSIjZWFhMTRlIi8+PHBhdGggZD0ibTYwLjA4MyA3OC44MTMtMzQuMzA4IDIyLjlhLjI1My4yNTMgMCAwIDEgLS4xMTYtLjExNmwzMS4yNjgtMjUuMzI5eiIgZmlsbD0iI2VhYTE0ZSIvPjxnIGZpbGw9IiNkYmQ4ZGQiPjxwYXRoIGQ9Im00MC4yOTMgMzcuNTUzaDQ3LjQxM3YyLjA1N2gtNDcuNDEzeiIvPjxwYXRoIGQ9Im00MC4yOTMgNDUuNDg3aDQ3LjQxM3YyLjA1N2gtNDcuNDEzeiIvPjxwYXRoIGQ9Im00MC4yOTMgNTMuNDIyaDQ3LjQxM3YyLjA1N2gtNDcuNDEzeiIvPjxwYXRoIGQ9Im00OC4yNTYgNjEuMzU2aDMxLjQ4OHYyLjA1N2gtMzEuNDg4eiIvPjwvZz48L2c+PC9zdmc+" /></a>
+            </div>
+            <div class="font fontThin resumeContent MainFont cannotselect">
+                。Graduate form NCTU (國立交通大學)
+            </div>
+            <div class="font fontThin resumeContent MainFont cannotselect">
+                。Studing at NCKU (國立成功大學)
+            </div>
+            <div class="line"></div>
+            <div class="font fontThin resumeContent MainFont cannotselect"> I'm Wei Li, from NCTU Design & Thinking. </div>
+            <div class="font fontThin resumeContent MainFont cannotselect">
+                I am a designer with UX experience and UI design skills, and I have been leading design thinking teams for more than 3 years. I have conducted more than ten workshops and led dozens of students to business and social design.
+            </div>
+        </div>
+
+    </div>
+    
+    
+    <!-- Part 2 Ability Bar -->
+    <div id="abilityContainer" class="abilityContainer">
+        <div class="resumeTitle font ">
+            <table>
+                <tr>
+                    <td>
+                        <div class="abilityBox MainFont fontThin">
+                            <div class="fontBold">Programing Ability</div>
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <div>CSS</div>
+                                    </td>
+                                    <td class="fontThin">
+                                        <div class="abilityBar" style="background: linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -moz-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -webkit-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -o-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript</td>
+                                    <td><div class="abilityBar"></div></td>
+                                </tr>
+                                <tr>
+                                    <td>PHP</td>
+                                    <td><div class="abilityBar"></div></td>
+                                </tr>                
+                            </table>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="abilityBox MainFont fontThin">
+                            <div>Design skill</div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>Design Thinking</div>
+                                    </td>
+                                    <td>
+                                        <div class="abilityBar" style="background: linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -moz-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -webkit-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -o-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>User Experience Design</td>
+                                    <td><div class="abilityBar"></div></td>
+                                </tr>
+                                <tr>
+                                    <td>Product Thinking</td>
+                                    <td><div class="abilityBar"></div></td>
+                                </tr>                
+                            </table>
+                        </div>
+                    </td>
+                    <td>                  
+                        <div class="abilityBox MainFont fontThin">
+                            <div>Language</div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div></div>
+                                    </td>
+                                    <td>
+                                        <div class="abilityBar" style="background: linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -moz-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -webkit-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -o-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript</td>
+                                    <td><div class="abilityBar"></div></td>
+                                </tr>
+                                <tr>
+                                    <td>PHP</td>
+                                    <td><div class="abilityBar"></div></td>
+                                </tr>                
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>                  
+                        <div class="abilityBox MainFont fontThin">
+                            <div>personality traits </div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>Enthusiam</div>
+                                    </td>
+                                    <td>
+                                        <div class="abilityBar" style="background: linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -moz-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -webkit-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);
+                                        background: -o-linear-gradient(45deg, rgba(255, 50, 85, 1)15%, rgba(176, 98, 221, 0.8)60%);"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Creativity</td>
+                                    <td><div class="abilityBar"></div></td>
+                                </tr>
+                                <tr>
+                                    <td>PHP</td>
+                                    <td><div class="abilityBar"></div></td>
+                                </tr>                
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+           
+            </table>
+            
+        </div>        
+    </div>
+
+
+    <!-- Part 3 time series -->
+    <div id="expContainer" class="expContainer">
+        <div class="font fontBold fontNormal resumeTitle">Resume
+        </div>
+    </div>
+    <!-- Part 4 Gallery -->
+    <div id="porContainer" class="porContainer">
+        <div class="font fontBold fontNormal resumeTitle">Resume
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- <div class="backG"> -->
+
+
+
+
+
+<script src="profile.js"></script>
+<footer>
+
+</footer>
+</body>
+</html>

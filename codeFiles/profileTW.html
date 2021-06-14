@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profileTW.css">
+    <style>
+        .font{
+           font-family: 'Noto Sans TC', sans-serif;
+           letter-spacing: 0.6vw;
+        }
+        .fontTW{
+           font-family: 'Noto Sans TC', sans-serif;
+           letter-spacing: 0.2vw;
+        }
+        .fontLink:hover{
+            color: cadetblue;
+        }
+        .fontEngNormal{
+            font-size: 2vw;
+            letter-spacing: 0.6vw;
+        }
+        .fontTab{
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 0.3vw;
+        }
+        .fontEng{
+            font-size: 2vw;
+            letter-spacing: 0.3vw;
+        }
+        .fontWihte{
+            color: white;
+        } 
+        .problemWholeTW{
+            position: absolute;
+            top: 0%;
+            z-index: 1000;
+            display: none;
+            margin-left: 16vw;
+            margin-top: 30.25vw;
+        } 
+        .clickHereTW{
+            position: absolute;
+            z-index: 1000;
+            display: none;
+            top: 0%;
+            margin-left: 32vw;
+            margin-top: 34vw;   
+            font-size: 1vw;
+            transform: rotate(-10deg);
+            letter-spacing: 2px;
+            color:rgb(1, 122, 86);      
+            /* color: brown; */
+            align-items: flex-end;
+        }
+        .firstSentenceTW{
+            width: 20.5vw;
+        }
+    </style>
+</head>
+
+<!-- *****************************開這裡換body************************************* -->
+<body onload="start()">        
+    <!-- 語言選項(丟post php回傳網頁) -->
+    <form action="index.php" method="post">
+        <div class="languageBox" id="languageBox">
+            <button type="submit" class="hiddenBtn"  id="lanTaiwan" name="lanBtn" value="TW"><img src="taiwan.png" alt="taiwan" class="lanBtn"></button>
+            <button type="submit" class="hiddenBtn" id="lanUS" name="lanBtn" value="US"><img src="US.png" alt="US" class="lanBtn" ></button>
+        </div>
+        <div id="defultLan" style="display: none;">TW</div>
+    </form>
+<!-- <div class="back1"></div> -->
+<!-- <div class="backG"></div> -->
+
+
+<!-- diologIntro -->
+<div class="diologContainer">
+    <!-- <div style="margin-left: 10%;"> -->
+    <div id="intro">
+        <div class="font fontBold fontExtraLarge cannotselect" id="hi">Hi!</div>
+        <div class="font fontEngNormal cannotselect" id="Wei">我是威論。</div>
+        <div class="font fontEngNormal cannotselect" id="ps">身為一個設計師，</div>   
+        <div class="flexText" id="ani">
+            <div class="font fontEngNormal cannotselect firstSentenceTW"> 
+            </div> 
+            <div class="font fontEngNormal cannotselect">就是我的生活 </div>
+        </div>        
+
+    </div>
+</div>
+<div class="touchingEffect problemWholeTW" id="problemWhole"><span class="spanP font fontEng fontBold cannotselect problem touchingEffect"><span>解</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>開</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>眼</span></span><span class="spanP font fontEng cannotselect fontBold problem touchingEffect"><span>前</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>的</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>一</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>切</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>困</span></span><span class="spanP font fontEng cannotselect problem touchingEffect"><span>難</span></span></div>
+<div class="fontHw clickHereTW" id="click">
+    <img src="arrow.png" style="width: 40px;height: 40px;"> 
+    <div>Click Here !</div>
+</div>
+
+
+
+<!-- header -----------------------------------------------------     ------          ------------------------       -->
+<div class="header" id="header">
+    <div class="font fontBold fontSizeLarge cannotselect">Hi!</div>
+    <div class="intro">
+        <div class="fontTW fontThin cannotselect">我是威論</div>
+        <div class="fontTW fontThin cannotselect">身為一個設計師 </div>   
+        <div class="fontTW fontThin cannotselect">解決眼前一切的困難就是我的生活... </div>
+    </div>
+</div>
+
+
+<!-- 左側按鈕  -------------------------------------------------------------------------------                  -->
+
+<div class="res2" id="res2">
+    <a href="resume.pdf" style="display: block;" target="_blank"><img src="res2.png" id="respic" class="respic"></a>
+    <div class="font fontBold" id="res2text">直接看紙本自傳請點此</div>
+    <div class="resShadow" id="resShadow"></div>
+</div>
+<!-- ----------------------------  Main Part   ---------------------------------------- -->
+<!-- ----------------------------  BackG   ---------------------------------------- -->
+<div class="Contaniner" id="container">
+    <div class="backGContaniner" id="BackContainer">
+        <div class="profileContaniner">
+            <div class="filpProfile">
+                <div class="filpProfileInner">
+                    <div  class="circle profile circleGraffi"></div>
+                    <img src="MyGraffi_hover.gif" class="circle profile profileBack">
+                </div>
+            </div>
+        </div>
+        <div class="tri"></div>
+        <div class="nameContaniner">
+            <div class="resumeTitle" id="resumeTitle">
+                <div class="font fontThin fontResumeNTitleText cannotselect">我是<span class="fontNormal fontResB">李威論</span></div>            
+                <div class="font fontThin fontResumeETitleText cannotselect">Wei Lee</div>            
+            </div>
+        </div>
+        <div class="cardContaniner" id="cardContainer">
+            <div class="backBasic" id="resumeBasic">
+                <div class="font fontThin cardContent MainFont cannotselect">
+                    。畢業自<span class="fontBold">國立交通大學</span>
+                </div>
+                <div class="font fontThin cardContent MainFont cannotselect">
+                    。正在就讀<span class="fontBold">國立成功大學</span>
+                </div>
+                <div class="font fontThin cardContent MainFont cannotselect"> 我是李威論，來自<span class="fontBold">NCTU Design & Thinking</span>。 </div>
+                <div class="font fontThin cardContent MainFont cannotselect">                    
+                    我是一個<span class="fontBold">設計師</span>，精熟於<span class="fontBold">前端設計</span>與<span class="fontBold">服務設計</span>。
+                </div>
+            </div>    
+            <div class="resIconBox">
+                <a href="https://www.facebook.com/profile.php?id=100002193295814" target="_blank"><img class="resIcon resIconFrame" src="f_hover.png"></a>
+                <a href="https://www.linkedin.com/in/%E5%A8%81%E8%AB%96-%E6%9D%8E-b9b98799/" target="_blank"><img  class="resIcon resIconFrame" src="lin.png" /></a>
+                <img id="email" class="resIcon resIconFrame" src="tell.png  " style="cursor: pointer;">
+            </div> 
+        </div>
+        <div class="contactInfo" id="contactInfo">
+            <table class="font fontThin MainFont cannotselect" style="letter-spacing: 5px;">
+                <tr>
+                    <td><a href="tel:+886-7-7353632"><img src="tell.png" alt="" class="resIcon resIconFrame" ></a></td><td style="padding-left: 10px;"><a href="tel:+886-7-7353632" style="text-decoration: none; color: black;">(07) 735-3632</a></td>
+                </tr>
+                <tr>
+                    <td><a href="tel:+886-927831121"><img src="cell.png" alt="" class="resIcon resIconFrame" ></a></td><td style="padding-left: 10px;"><a href="tel:+886-927831121" style="text-decoration: none; color: black;">0927-831-121</a></td>
+                </tr>
+                <tr>
+                    <td><a href="mailto:zorro.weilee@gmail.com"><img  class="resIcon resIconFrame" src="email.png" /></a></td><td style="padding-left: 10px;"><a href="mailto:zorro.weilee@gmail.com" style="text-decoration: none; color: black;">zorro.weilee@gmail.com</a></td>
+                </tr>
+            </table>
+        </div>
+        <!-- <div class="contactInfoTri">
+            <div style="position: absolute; z-index: 95; top: -1vw ; right: 20px; width:0; height:0; border-width:0 0.6vw 1vw ; border-style:solid;border-color:transparent transparent rgb(255, 255, 255);"></div>
+            <div class="font font MainFont" style="height: 3vw; line-height: 2.8vw; width: 9vw; text-align: center;">聯絡資料</div>
+        </div> -->
+        <div class="gTagConatainer">
+            <div class="gallerytag gTText fontBold font">作品集 <div class="gtani"></div><div class="gtani"></div><div class="gtani"></div>
+            </div>
+        </div>
+        <div class="gtShadow">
+        </div>
+        <!-- ----------------------------  GGGGGaaaaalllleeeeerrrryyyyy   ------------------------------------------------------------------------------ -->
+        <div class="galleryContainer" id="galleryContainer">
+            <!-- ----------------------------  Case 1    ---------------------------------------------------------- -->
+            <div class="caseContainer" >
+                <div class="casePicFrame" id="case1">                
+                    <a href="https://github.com/weilunlee/Profile-WebSite" target="_blank">
+                        <!-- <div  class="CBcover"></div> -->
+                        <div class="fontHw fontonPic" id="pic1">Click!</div>
+                        <img src="web.gif" alt="Chat Box Link" class="CBPhoto" title="Chat Box github link">
+                    </a>
+                </div>
+                <div class="caseTextFrame font fontThin GalleryMainFont">
+                    <a href="https://github.com/weilunlee/Profile-WebSite" target="_blank" style="text-decoration: none; color: black;"><span class="fontEngNormal fontBold fontLink">本網站</span></a>
+                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2021/5</span>
+                    <div style="width: 53vw; border: rgb(164, 216, 200) 1px solid;"></div>
+                    <div style="display: flex; flex: row; margin-top: 10px;">
+                        <div>
+                            <div class="fontNormal" style="font-size:23px">架構:</div>
+                            <div class="skillFrame">
+                                <ol>前端：HTML、CSS、JS三兄弟</ol>
+                                <ol>後端：
+                                    <ol>簡單PHP程式</ol>
+                                    <ol>運用000webhost的免費Server和DNS</ol>
+                                    <ol>(窮學生沒電沒錢)</ol>
+                                </ol>
+                                <ol>繪圖：illustrator (icon & 頭像)</ol>
+                            </div>
+                        </div>
+                        <div style="margin-left: 20px; width: 30vw;">
+                            <div class="fontNormal" style="font-size:23px">簡介:</div>
+                            <ol>玩了一些原生JS和CSS的搭配，對所有互動元件皆做互動設計，並以JS試做了一個瀏覽器中的瀏覽器XD</ol>
+                            <ol>用漫畫風來做為主視覺，並嘗試以CSS動畫做為網頁開始，對我來說整個網頁都是有趣的嘗試</ol>
+                            <ol>(連結為github，有圖檔和code。)</ol>
+                        </div>
+                    </div>
+                                        
+                </div>
+            </div>
+            <div class="caseContainer" >
+                <div class="casePicFrame" id="case2">                
+                    <a href="https://github.com/weilunlee/Chat-Box" target="_blank">
+                        <!-- <div  class="CBcover"></div> -->
+                        <div class="fontHw fontonPic" id="pic2">Click!</div>
+                        <img src="CB.gif" alt="Chat Box Link" class="CBPhoto" title="Chat Box github link">
+                    </a>
+                </div>
+                <div class="caseTextFrame font fontThin GalleryMainFont">
+                    <a href="https://github.com/weilunlee/Chat-Box" target="_blank" style="text-decoration: none; color: black;"><span class="fontEngNormal fontBold fontLink">WebSocket聊天室</span></a>
+                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2021/5</span>
+                    <div style="width: 53vw; border: rgb(164, 216, 200) 1px solid;"></div>
+                    <div style="display: flex; flex: row; margin-top: 10px;">
+                        <div>
+                            <div class="fontNormal" style="font-size:23px">架構:</div>
+                            <div class="skillFrame">
+                                <ol>前端三兄弟</ol>
+                                <ol>後端：
+                                    <ol>伺服器：Node.JS </ol> 
+                                    <ol>資料庫：MariaDB + TXT儲存文本</ol>
+                                </ol>
+                                <ol>連線：WebSocket</ol>
+                            </div>
+                        </div>
+                        <div style="margin-left: 20px; width: 30vw;">
+                            <div class="fontNormal" style="font-size:23px">簡介:</div>
+                            <ol>
+                                Node.JS為後臺Server + 用WebSocket連線的聊天室，後端Server是一個小小的聊天機器人，會做簡單問候與回應。
+                            </ol>
+                            <ol>由於我寄生的000WebHost不支援Node.JS，所以目前是無法連線的狀態XD</ol>
+                            <ol>(連結為github，可以自己載來自己玩)</ol>
+                        </div>
+                    </div>
+                                        
+                </div>
+            </div>         
+            
+            <div class="caseContainer" >
+                <div class="casePicFrame" id="case3">                
+                    <a href="https://github.com/weilunlee/PHP-SQL-Demo/tree/main" target="_blank">
+                        <!-- <div  class="CBcover"></div> -->
+                        <div class="fontHw fontonPic">Click!</div>
+                        <img src="SQL.gif" alt="Chat Box Link" class="CBPhoto" title="Chat Box github link">
+                    </a>
+                </div>
+                <div class="caseTextFrame font fontThin GalleryMainFont">
+                    <a href="https://github.com/weilunlee/PHP-SQL-Demo/tree/main" target="_blank" style="text-decoration: none; color: black;"><span class="fontEngNormal fontBold fontLink">MySQL CRUD Demo</span></a>
+                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2021/4</span>
+                    <div style="width: 53vw; border: rgb(164, 216, 200) 1px solid;"></div>
+                    <div style="display: flex; flex: row; margin-top: 10px;">
+                        <div>
+                            <div class="fontNormal" style="font-size:23px">架構:</div>
+                            <div class="skillFrame">
+                                <ol>前端三兄弟</ol>
+                                <ol>後端：
+                                    <ol>PHP + MySQL </ol> 
+                                    <ol>資料庫：MariaDB</ol>
+                                </ol>
+                            </div>
+                        </div>
+                        <div style="margin-left: 20px; width: 30vw;">
+                            <div class="fontNormal" style="font-size:23px">簡介:</div>
+                            <ol>
+                                SQL 資料操作DEMO，結合簡單UI設計
+                            </ol>
+                            <ol>自學成果檢驗用，證明我會XDD</ol>
+                            <ol>(連結同樣是github)</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            
+            <div class="caseContainer" >
+                <div class="casePicFrame" id="case4">                
+                    <a href="res.pdf" target="_blank">
+                        <!-- <div  class="CBcover"></div> -->
+                        <div class="fontHw fontonPic" id="pic2">Click!</div>
+                        <img src="res.gif" alt="Chat Box Link" class="CBPhoto" title="Chat Box github link">
+                    </a>
+                </div>
+                <div class="caseTextFrame font fontThin GalleryMainFont">
+                    <a href="res.pdf" target="_blank" style="text-decoration: none; color: black;"><span class="fontEngNormal fontBold fontLink">UX專案經驗</span></a>
+                    <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2019/9</span>
+                    <div style="width: 53vw; border: rgb(164, 216, 200) 1px solid;"></div>
+                    <div style="display: flex; flex: row; margin-top: 10px;">
+                        <div>
+                            <div class="fontNormal" style="font-size:23px">UX經驗集案例:</div>
+                            <div class="skillFrame">
+                                <ol>新竹舊城店鋪改造</ol>
+                                <ol>英國文創產業的使用者經驗調查</ol>
+                                <ol>12次工作坊</ol>
+                                <ol>其他校園專案</ol>
+                            </div>
+                        </div>
+                        <div style="margin-left: 20px; width: 30vw;">
+                            <div class="fontNormal" style="font-size:23px">簡介:</div>
+                            <ol>
+                                大學踏入 Design Thinking 後便走上了使用者設計這條路一去而無返，無怨無悔。這是我一生的所愛，面對使用者，分析問題，找出合理合適的解決方法，全世界最快樂的事莫過於此。
+                            </ol>
+                        </div>
+                    </div>
+                                        
+                </div>
+            </div>     
+        </div>
+    </div>
+</div>
+
+
+<!-- ----------------------------  Resume   ---------------------------------------- -->
+
+<div class="Main font fontBold"> 
+    <!-- Part 1 resume -->
+    <div class="MenuBTNContainer fontTab" id="MenuBTNContainer">
+        <div class="tab resumeTab cannotselect" id="ResumeBtn">我想告訴你...</div>
+        <div class="tab abilityTab cannotselect" id="AbilityBtn">我會...</div>
+    </div>
+
+    <div id="resumeContainer" class="resumeContainer">
+        <div class="resumeHeader" id="resumeHeader"><div class="MainBtn closeBtn cannotselect" id="RcloseBtn">&#10006</div></div>
+        <div class="resumeBody" id="resumeBody"></div>
+    </div>
+    <!-- <div id="resumeContainer" class="resumeContainer fontWihte"> -->
+    <div id="resumeContainerTXT" style="display: none;">
+        <div style="display: flex; ">
+            <div style="border: 1vw solid rgb(255, 214, 78); position: absolute; left: 0%; height: 131vh; width: 0%;"></div>
+            <div class="resumeBasic" id="resumeBasic">
+                <div style="display: flex; flex-direction: row; ">
+                    <div class="font fontBold fontLarge cannotselect resfontrow">我是誰</div>
+                    <div style="margin-left:4.5vw;">
+                        <div class="font fontThin resumeContent MainFont cannotselect"> 。我是李威論，來自NCTU Design & Thinking </div>
+                        <div class="font fontThin resumeContent MainFont cannotselect"> 。精熟於前後端語法，CSS、JS、PHP & Node.JS </div>
+                        <div class="font fontThin resumeContent MainFont cannotselect"> 。曾任設計思考教練，具有帶領設計思考團隊3年以上的經驗、舉辦過十數場工作坊 </div>
+                        <div class="font fontThin resumeContent MainFont cannotselect"> 。擅長UX的以人為本的質化設計理念、與統計與計量經濟等等傳統量化分析方法</div>
+                        <div class="font fontThin resumeContent MainFont cannotselect"> 。具平面設計能力</div>
+                        <div class="font fontThin resumeContent MainFont cannotselect"> 。畢業於交大運管系，正在成大就讀會計資訊研究所</div>
+                        <div class="font fontThin resumeContent MainFont cannotselect"></div>
+                    </div>
+                </div>                
+                <div class="timeLineContainer">
+                    <div class="font fontBold fontTitle resTopic cannotselect">設計經歷</div>
+                    <div  class="timeLinetimeContainer">
+                        <div class="font fontBold resumeContent MainFont cannotselect">2019.7-8</div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">2018.5</div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">2017.12</div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">2017.7-9</div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">2017.6 </div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">2016.5 </div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">2015.9</div>
+                    </div>                    
+                    <div class="timeLine"></div>
+                    <div  class="timeLineFontContainer">
+                        <div class="font fontBold resumeContent MainFont cannotselect">舊市愛搞怪
+                        </div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">於工研院進行英國文創與UX經驗分享</div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">於新竹荒野協會進行英國文創與UX經驗分享</div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">赴英國，組 "Entro世界旅行家" ，對英國文創產業進行使用者研究</div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">受玉山青年菁英論壇邀請，帶領論壇成員使用商業設計模型 </div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">協助淡江大學成立思創社   (淡大設計思考) </div>
+                        <div class="font fontBold resumeContent MainFont cannotselect">舉辦設計思考工作坊    
+                            <ol>(16年-19年，總共主辦了12次設計思考工作坊)</ol>
+                        </div>
+                    </div>
+                    <div style="display: flex; height: 200px; flex-direction: row; position: absolute; top: 105vh; left: 8vw; justify-content: center;">
+                        <div class="resIcon resIconResFrame">
+                            <a href="res.pdf" target="_blank"><img src="res.png"></a>
+                        </div>
+                        <a href="res.pdf" target="_blank" style="text-decoration: none; color: black;"><div class="font fontThin  MainFont cannotselect" style="margin-left: 3vw; line-height: 200px;">&larr; UX與服務設計經驗案例分享 PDF</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Part 2 Ability Bar -->
+    <div id="abilityContainer" class="abilityContainer">
+        <div class="resumeHeader" id="abilityHeader"><div class="MainBtn closeBtn cannotselect" id="AcloseBtn">&#10006</div></div>
+        <div class="resumeBody" id="abilityBody"></div>
+    </div>
+    <div id="abilityContainerTXT" class="abilityContainer">
+        <!-- <div style="display: flex; flex-direction: row; justify-content: space-around; width:80vw; height: calc(3em + 2px) ; position: absolute; top: 0%; color: white; background-color: rgb(20, 20, 20);">
+            <div class="font fontThin cannotselect" style="font-size: 2em; width: 20vw; text-align: center; border-right: white 1px solid;" id="prog">程式能力</div>
+            <div class="font fontThin cannotselect" style="font-size: 2em; width: 20vw; text-align: center; border-right: white 1px solid;" id="desg">設計能力</div>
+            <div class="font fontThin cannotselect" style="font-size: 2em; width: 20vw; text-align: center; border-right: white 1px solid;" id="prson">人格特質</div>
+        </div> -->
+        
+        <div class="resumeTitle font ">
+            <div class="abilityBoxBar">
+                <!-- <div class="abilityBox prog" id="programmingAbi" style="margin-top: calc(3em + 2px);"> -->
+                <div class="abilityBox prog" id="programmingAbi">
+                    <div style="width: 3vw; height: 3vw;"><div class="gtaniA prog"></div><div class="gtaniA prog"></div><div class="gtaniA prog"></div></div>
+                    <div style="width: 130vw; height: 50vh; display: flex; flex-direction: row; align-items: center; margin-left: 15vw;">
+                        <div class="circle"><img src="code.png" ></div>
+                        <div class="barBox " id="programmingTab" style="width: 29vw;">    
+                            <table>
+                                <tr>
+                                    <td>JavaScript</td><td>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                                <tr>
+                                    <td>PHP</td><td>&#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td><td>&#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                                <tr>
+                                    <td>Python</td><td>&#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                                <tr><td colspan="2"><div class="line"></div></td></tr>
+                                <tr>
+                                    <td>演算法</td><td>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                                <tr>
+                                    <td>物件導向程式設計</td><td>&#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                                <tr>
+                                    <td>資料結構</td><td>&#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                                <tr>
+                                    <td>資料庫</td><td>&#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                            </table>    
+                        </div>        
+                        <div class="barBox" id="programmingTab" style="width: 29vw;">    
+                            <table>
+                                <tr>
+                                    <td>問題解決能力</td><td>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                                <tr>
+                                    <td>創意</td><td>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                                <tr>
+                                    <td>簡潔程度</td><td>&#x2605; &#x2605; &#x2605;</td>
+                                </tr>
+                            </table>    
+                        </div>        
+                        <div class="circle" style="width: 10vw; height: 10vw; background-color: black; display: flex; justify-content: center;">
+                            <div class="font fontBold fontEng" style="color: white; line-height: 10vw;"><span style="font-size: 2em;">4</span>.4分</div>
+                        </div>
+                    </div>
+                          
+                </div>
+               
+
+
+                <div style="height: 50vh;">
+                    <div class="abilityBox des" id="programmingAbi">
+                        <div style="width: 100vw; height: 50vh; position: absolute; right: 0%; display: flex; flex-direction: row; align-items: center; margin-left: 15vw;">
+                            <div class="circle" style="width: 10vw; height: 10vw; background-color: black; display: flex; justify-content: center;">
+                                <div class="font fontBold fontEng" style="color: white; line-height: 10vw;"><span style="font-size: 2em;">4</span>.5分</div>
+                            </div>
+                            <div class="barBox " id="programmingTab">    
+                                <table>
+                                    <tr>
+                                        <td>同理</td><td>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>蒐集 + 分析</td><td>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>發想</td><td>&#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>實作經驗</td><td>&#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                </table>    
+                            </div>
+                            <div class="barBox" id="programmingTab" style="width: 29vw;">    
+                                <table>
+                                    <tr>
+                                        <td>服務設計</td><td>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>UX使用者同理</td><td>&#x2605; &#x2605; &#x2605; &#x2605;  &#x2605;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>UI交互設計</td><td>&#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>平面設計</td><td>&#x2605; &#x2605; &#x2605;  &#x2605;  &#x2605;</td>
+                                    </tr>
+                                </table>    
+                            </div>        
+                            <div class="circle"><img src="design.png" ></div>
+                            
+                        </div>
+                        <div style="position: absolute; right: 5%;"><div style="width: 3vw; height: 3vw;"><div class="gtaniA des"></div><div class="gtaniA des"></div><div class="gtaniA des"></div></div></div>
+ 
+                    </div>
+                   
+                </div>
+                
+
+
+
+
+
+
+                <div style="height: 50vh;">
+                    <div class="abilityBox prs" id="programmingAbi">
+                        <div style="width: 3vw; height: 3vw;"><div class="gtaniA des"></div><div class="gtaniA des"></div><div class="gtaniA des"></div></div>
+                        <div style="width: 80vw; height: 50vh; display: flex; flex-direction: row; align-items: center; margin-left: 15vw;">
+                            <div class="circle"><img src="presonality.png" ></div>
+                            <div class="barBox " id="programmingTab">    
+                                <table>
+                                    <tr>
+                                        <td>適應能力</td><td>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>邏輯思考</td><td>&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>團隊溝通能力</td><td>&#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>創造力</td><td>&#x2605; &#x2605; &#x2605; &#x2605;</td>
+                                    </tr>
+                                </table>    
+                            </div>
+                            <div class="barBox" id="programmingTab" style="width: 15vw;">    
+                                <table>
+                                    <thead><div style="font-weight: 900 !important;">人格<br>特質</div></thead>
+                                    <tr>
+                                        <td>開朗外向</td>
+                                    </tr>
+                                    <tr>
+                                        <td>喜好合作</td>
+                                    </tr>
+                                    <tr>
+                                        <td>包容力強</td>
+                                    </tr>
+                                </table>    
+                            </div>      
+                        </div>
+                              
+                    </div>
+                   
+                </div>
+
+            </div>        
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+<script src="profileTW.js"></script>
+
+</body>
+</html>
