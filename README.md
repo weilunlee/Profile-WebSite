@@ -18,7 +18,6 @@
 
 ### codeFiles  -  Website Source code
 including front end files with two html 、 two JS and two CSS files (with two lenguage versions mandarin & English)、and a backend php application (for switching lenguage)
-我在這個專案用 JS + CSS 玩了不少有趣的嘗試，例如做了一個類似瀏覽器的界面，挺好玩的。
 
 ### aiFiles  -  Website PNG Source File
 designing with adobe illustrator  :joy:
